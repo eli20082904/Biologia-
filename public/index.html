@@ -1,0 +1,230 @@
+# esporte
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esporte em Foco</title>
+    <style>
+        /* Reset básico de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Cabeçalho e navegação */
+        header {
+            background-color: #1a1a1a;
+            padding: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Seção de banner */
+        .banner {
+            background-image: url('https://via.placeholder.com/1500x500?text=Esporte');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 24px;
+        }
+
+        /* Seção Sobre */
+        .sobre {
+            padding: 40px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .sobre h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .sobre p {
+            font-size: 18px;
+        }
+
+        /* Seção de Notícias */
+        .noticias {
+            padding: 40px;
+            background-color: #e2e2e2;
+            text-align: center;
+        }
+
+        .noticias h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .noticia {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .noticia h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .noticia p {
+            font-size: 16px;
+        }
+
+        /* Seção de Contato */
+        .contato {
+            padding: 40px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .contato h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contato form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contato label {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .contato input, .contato textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 600px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contato button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contato button:hover {
+            background-color: #555;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="content">
+            <h1>Bem-vindo ao Mundo dos Esportes!</h1>
+            <p>Fique por dentro das últimas notícias e atualizações do seu esporte favorito.</p>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos apaixonados por esportes e queremos trazer as melhores informações para você. Fique atualizado com as últimas notícias e acontecimentos.</p>
+    </section>
+
+    <section id="noticias" class="noticias">
+        <h2>Últimas Notícias</h2>
+        <div class="noticia">
+            <h3>Campeonato Mundial de Futebol começa amanhã!</h3>
+            <p>O campeonato mundial de futebol começa amanhã. Não perca nenhuma ação emocionante. Clique para saber mais...</p>
+        </div>
+        <div class="noticia">
+            <h3>NBA: A Grande Final</h3>
+            <p>A grande final da NBA está se aproximando. Quem será o grande vencedor? Fique ligado!</p>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2>Entre em Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Esporte em Foco. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
