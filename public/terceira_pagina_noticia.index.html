@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Biologia!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0e3baf;
+            text-align: center;
+            color: rgb(18, 18, 18);
+        }
+        header {
+            background: #ffffff;
+            color: rgb(10, 60, 159);
+            padding: 15px;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: rgb(231, 32, 215);
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgb(246, 235, 249);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #d34be8;
+        }
+        p {
+            text-align: justify;
+        }
+        .quiz-container {
+            background: #fff;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            background: #199c5f;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="primeiro_tela.index.html">Início</a></li>
+                <li><a href="segunda_pagina.index.html">Sobre</a></li>
+                <li><a href="terceira_pagina_noticia.index.html">Notícias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Bem-vindo!</h1>
+        <h1>AQUI TEM OS CONTEÚDOS COMPLETOS DE BIOLOGIA!!</h1>
+
+        <div class="quiz-container">
+            <h1>Quiz de Biologia</h1>
+            <div id="quiz"></div>
+            <button id="submit">Enviar Respostas</button>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script>
+    const quizData = [
+        {
+            question: "1. Qual dessas estruturas pertence ao vírus?",
+            options: ["Parede celular", "Núcleo definido", "Capsídeo", "Mitocôndrias"],
+            correct: 2
+        },
+        {
+            question: "2. Quais organismos apresentam ciclo de vida com esporo?",
+            options: ["Bactérias", "Protozoários", "Fungos", "Vírus"],
+            correct: 2
+        },
+        {
+            question: "3. Uma característica dos animais invertebrados é:",
+            options: ["Presença de crânio", "Falta de coluna vertebral", "Sistema circulatório fechado", "Presença de vértebras"],
+            correct: 1
+        },
+        {
+            question: "4. Qual relação ecológica beneficia apenas uma das espécies, sem prejudicar a outra?",
+            options: ["Predação", "Comensalismo", "Competição", "Parasitismo"],
+            correct: 1
+        },
+        {
+            question: "5. Como se classificam os vegetais que possuem flores e frutos?",
+            options: ["Briófitas", "Pteridófitas", "Gimnospermas", "Angiospermas"],
+            correct: 3
+        },
+        {
+            question: "6. O que caracteriza as bactérias quanto à estrutura celular?",
+            options: ["São eucariontes", "Possuem núcleo definido", "Não possuem organelas membranosas", "São pluricelulares"],
+            correct: 2
+        },
+        {
+            question: "7. Protozoários são organismos:",
+            options: ["Eucariontes e unicelulares", "Eucariontes e multicelulares", "Procariontes e unicelulares", "Procariontes e multicelulares"],
+            correct: 0
+        },
+        {
+            question: "8. Qual desses animais é vertebrado?",
+            options: ["Esponja", "Estrela-do-mar", "Tubarão", "Minhoca"],
+            correct: 2
+        },
+        {
+            question: "9. O equilíbrio dos ecossistemas depende principalmente de:",
+            options: ["Competição entre espécies", "Biodiversidade e interações ecológicas", "Baixa diversidade biológica", "Exclusivamente da ação humana"],
+            correct: 1
+        },
+        {
+            question: "10. As plantas são classificadas em grupos taxonômicos como:",
+            options: ["Apenas Briófitas e Gimnospermas", "Apenas Angiospermas", "Briófitas, Pteridófitas, Gimnospermas e Angiospermas", "Apenas Pteridófitas e Angiospermas"],
+            correct: 2
+        }
+    ];
+
+    const quizContainer = document.getElementById('quiz');
+    const submitButton = document.getElementById('submit');
+    const resultContainer = document.getElementById('result');
+
+    function buildQuiz() {
+        const output = [];
+        quizData.forEach((q, index) => {
+            const options = q.options.map((option, i) =>
+                `<label><input type="radio" name="question${index}" value="${i}"> ${option}</label><br>`
+            ).join("");
+            output.push(`<div class="question"><p>${q.question}</p>${options}</div>`);
+        });
+        quizContainer.innerHTML = output.join("");
+    }
+
+    function showResults() {
+        const answers = quizContainer.querySelectorAll('input[type=radio]:checked');
+        let score = 0;
+        answers.forEach((answer, index) => {
+            if (parseInt(answer.value) === quizData[index].correct) {
+                score++;
+            }
+        });
+        resultContainer.innerHTML = `Você acertou ${score} de ${quizData.length} perguntas! 🌟`;
+    }
+
+    buildQuiz();
+    submitButton.addEventListener('click', showResults);
+    </script>
+</body>
+</html>
