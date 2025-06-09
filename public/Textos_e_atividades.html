@@ -2,62 +2,89 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Biologia - Conteúdos</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #e6e6ff;
-      color: #1b0034;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
+      background-color: #15144d;
+      color: #fafafa;
     }
-
     header {
-      background: #4b0082;
-      color: white;
-      padding: 20px;
-      font-size: 38px;
+      background: #0a022d;
+      padding: 15px 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fafafa;
+      text-align: center;
     }
-
+    nav ul {
+      list-style: none;
+      padding: 0; margin: 10px 0 0 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fbfafa;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
     .container {
       max-width: 900px;
       margin: 30px auto;
       padding: 20px;
-      background: #f3f0ff;
+      background: #3c1f6a;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(203, 116, 240, 0.7);
+      color: #fafafa;
     }
-
-    h2 {
-      color: #961184;
-      border-bottom: 2px solid #e22b31;
-      padding-bottom: 5px;
-      margin-top: 30px;
+    h1, h2 {
+      margin-top: 20px;
+      color: #e2c3ff;
     }
-
     p {
       text-align: justify;
+      margin: 0 0 20px 0;
+      color: #fafafa;
       line-height: 1.6;
     }
-
     footer {
-      background-color: #4b0082;
-      color: white;
+      background-color: #0a022d;
+      color: #fafafa;
       text-align: center;
-      padding: 15px;
+      padding: 15px 0;
       margin-top: 40px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    Conteúdos de Biologia 🧬🌿🦠
+    <nav>
+      <ul>
+        <li><a href="início.html">Início</a></li>
+        <li><a href="conteudo.html">Conteúdo</a></li>
+        <li><a href="atividades.html">Atividades</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="Textos_e_atividades.html">Textos e Atividades</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div class="container">
-    <h2>Vírus</h2>
+    <h1>Conteúdos de Biologia</h1>
+    <p>Aprenda sobre os principais grupos de seres vivos e suas características!</p>
+
+ <h2>Vírus</h2>
     <p>Os vírus são organismos extremamente simples, compostos basicamente por uma cápsula de proteína (chamada capsídeo) que envolve o material genético, que pode ser DNA ou RNA, mas nunca os dois ao mesmo tempo. Eles não possuem célula, organelas, metabolismo próprio, nem capacidade de se reproduzir sozinhos — por isso, são chamados de parasitas intracelulares obrigatórios.
 
 Para se reproduzirem, os vírus invadem células hospedeiras e utilizam a maquinaria celular do organismo invadido para produzir novos vírus. Esse processo pode causar a morte da célula, além de sintomas e doenças no organismo afetado.
@@ -265,8 +292,12 @@ Possuem flores e frutos que protegem as sementes.
 
 Representam a maior parte da flora terrestre.
 
-Exemplo: árvores frutíferas, gramíneas, flores ornamentais.</p>  
-</div>
+Exemplo: árvores frutíferas, gramíneas, flores ornamentais.
+
+    <!-- Os demais conteúdos seguem com o mesmo estilo -->
+    <!-- Fungos, Animais Invertebrados, Vegetais com Flores e Frutos, Bactérias, Protozoários, etc. -->
+
+  </div>
 
   <footer>
     © 2025 - Página educativa de Biologia. Todos os direitos reservados.
