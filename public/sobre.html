@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Sobre o Trabalho dos Alunos</title>
   <style>
     body {
@@ -16,6 +16,8 @@
       background-color: #0a022d;
       padding: 20px 0;
       text-align: center;
+      /* Garantir que o texto do header tenha bom contraste */
+      color: #ffffff;
     }
 
     header h1 {
@@ -43,10 +45,13 @@
       color: #ffffff;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s ease;
     }
 
     nav ul li a:hover {
       text-decoration: underline;
+      color: #d1aaff; /* cor clara no hover para destaque */
     }
 
     main {
@@ -80,6 +85,7 @@
       cursor: pointer;
       border-radius: 8px;
       margin-top: 20px;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
@@ -105,17 +111,17 @@
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Sobre o Trabalho dos Alunos</h1>
-    <nav>
-        <ul>
-             <li><a href="início.html">Início</a></li>
-             <li><a href="conteudo.html">Conteúdo</a></li>
-             <li><a href="atividades.html">Atividades</a></li>
-             <li><a href="sobre.html">Sobre</a></li>
-        </ul>
-    </nav>
+     <h1>Sobre o Trabalho dos Alunos</h1>
+      <nav>
+          <ul>
+              <li><a href="início.html">Início</a></li>
+              <li><a href="conteudo.html">Conteúdo</a></li>
+              <li><a href="atividades.html">Atividades</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="Textos_e_atividades.html">Textos e Atividades</a></li>
+          </ul>
+      </nav>
   </header>
 
   <main>
@@ -146,6 +152,5 @@
       mensagem.textContent = "Continue se esforçando! O aprendizado é uma jornada, e cada passo conta.";
     }
   </script>
-
 </body>
 </html>
