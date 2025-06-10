@@ -1,0 +1,77 @@
+body {
+      font-family: Arial, sans-serif;
+      background: #e6e6ff;
+      color: #1b0034;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #4b0082;
+      color: white;
+      padding: 10px 20px; /* Reduzi o padding para diminuir o banner */
+      font-size: 28px; /* Fonte menor para o cabeçalho */
+      font-weight: 700;
+      letter-spacing: 1px; /* Espaçamento entre letras para melhor leitura */
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #e22b31;
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #f3f0ff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #4b0082;
+      margin-top: 30px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #e22b31;
+      padding-bottom: 5px;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.6;
+      color: #1b0034;
+    }
+
+    footer {
+      background-color: #4b0082;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
